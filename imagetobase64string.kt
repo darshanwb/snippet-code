@@ -1,7 +1,7 @@
 //  Here's a reusable function that converts an image to a Base64 string in Kotlin
 
 /*
-The Image to convert in base64 string repository is a Python project that allows you to easily convert images into base64 encoded strings. 
+The Image to convert in base64 string repository is a Android Kotlin project that allows you to easily convert images into base64 encoded strings. 
 Use it as a standalone tool or integrate it into your existing projects. 
 Includes source code and documentation.
 
