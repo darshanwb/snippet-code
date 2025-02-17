@@ -1,3 +1,12 @@
+//----------------------- dependencies: --------------------//
+
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.1
+  file_picker: ^8.3.3
+  device_info: ^2.0.3
+
+
+
 //----------------------- in Manifest --------------------//
 
 // <uses-feature
