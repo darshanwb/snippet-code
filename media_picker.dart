@@ -23,6 +23,35 @@
 //     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
 
 
+// ------------------ iOS side -----------------------------------//
+//info or info.plist
+
+
+<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera to take pictures.</string>
+<key>NSMicrophoneUsageDescription</key>
+	<string>We need access to your microphone for videos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your gallery to upload images.</string>
+
+
+// -> Pods/Podfile
+
+platform :ios, '11.0'
+
+# Add these for permission_handler
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+    target.build_configurations.each do |config|
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
+        '$(inherited)',
+        'PERMISSION_PHOTOS=1',
+        'PERMISSION_CAMERA=1'
+      ]
+    end
+  end
+end
 
 
 // ------------------- Global Dart File ----------------------------//
